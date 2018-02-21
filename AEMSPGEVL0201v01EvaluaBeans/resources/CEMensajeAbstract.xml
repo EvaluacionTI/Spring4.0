@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idBeanPlantilla" abstract="true">
+      <property name="message1" value="Carta Fianza"/>
+      <property name="message2" value="Por cumplimiento"/>
+      <property name="message3" value="Valorado de Carta Fianza"/>
+	</bean>
+
+	<bean id="idBeanIndia" class="pe.tata.bfp.entidad.beans.CEMensajeIndia" parent="idBeanPlantilla">
+      <property name="mensaje1" value="Hello India!"/>
+      <property name="mensaje3" value="Namaste India!"/>
+		
+	</bean>
+
+</beans>

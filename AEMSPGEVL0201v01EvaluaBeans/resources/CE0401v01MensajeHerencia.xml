@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCEMensajeHerencia" class="pe.tata.bfp.entidad.beans.CEMensajeHerencia">
+		<property name="mensaje1" value="Bienvenido a Carta Fianza"></property>
+		<property name="mensaje2" value="Carta Fianza Sunat"></property>
+	</bean>
+	
+	<bean id="idCEMensajeIndia" class="pe.tata.bfp.entidad.beans.CEMensajeIndia">
+		<property name="mensaje1" value = "Por cumplimiento"></property>
+		<property name="mensaje2" value = "Cancelación por Cliente"></property>
+		<property name="mensaje3" value = "Cancelacion por Horamiento "></property>
+	</bean>
+
+</beans>
