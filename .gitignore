@@ -13,4 +13,10 @@ buildNumber.properties
 
 
 #Excluir archivos
-.pmd
+*.pmd
+*.log
+
+# Excluir binarios
+/bin/*
+
+
