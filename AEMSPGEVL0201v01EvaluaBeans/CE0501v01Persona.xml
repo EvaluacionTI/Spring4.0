@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 1.0 Bean simple -->
+	<bean id="idCEPersona" class="pe.tata.bfp.entidad.beans.CEPersona"/>
+
+	<!-- 2.0 Bean con inyección de constructor -->		
+	<bean id="idCEPersonaConstructor" class="pe.tata.bfp.entidad.beans.CEPersona">
+		<constructor-arg value="Carta Fianza"></constructor-arg>
+	</bean>
+	
+	<!-- 3.0 Bean con referencias de objeto de constructores -->
+	<bean id="idCEPersonaObjeto" class="pe.tata.bfp.entidad.beans.CEPersona">
+		<constructor-arg value="Carta Fianza Sunat"></constructor-arg>
+	</bean>
+	
+	<!-- 4.0 Bean con inyección de propiedades simples  -->
+	<bean id="idReina" class="pe.tata.bfp.entidad.beans.CEPersona">
+		<property name="id" value="29"></property>
+		<property name="nombre" value="Mery Cárdenas"></property>
+		<property name="fechaNacimiento" value="29/Jul/1967"></property>
+	</bean>
+	
+	<bean id="idEsteban" class="pe.tata.bfp.entidad.beans.CEPersona">
+		<property name="id" value="5"></property>
+		<property name="nombre" value="Esteban Díaz"></property>
+		<property name="fechaNacimiento" value="05/01/2002"></property>
+	</bean>
+	
+	<!-- 5.0 Bean con inyección de propiedades con Listas -->
+	<bean id="idCEChistera" class="pe.tata.bfp.entidad.beans.CEMensaje"></bean>
+	<bean id="idCEGorra" class="pe.tata.bfp.entidad.beans.CEMensaje"></bean>
+	<bean id="idCEBoina" class="pe.tata.bfp.entidad.beans.CEMensaje"></bean>
+	
+	<bean id="idCEPersonaLista" class="pe.tata.bfp.entidad.beans.CEPersona">
+		<property name="id" value="2"></property>
+		<property name="nombre" value="Illari Díaz"></property>
+		<property name="fechaNacimiento" value="22/08/2014"></property>
+		<property name="mensaje">
+			<list>
+				<ref bean="idCEChistera"/>
+				<ref bean="idCEGorra"/>
+				<ref bean="idCEBoina"/>
+			</list>
+		</property>
+	</bean>
+</beans>
+
+
