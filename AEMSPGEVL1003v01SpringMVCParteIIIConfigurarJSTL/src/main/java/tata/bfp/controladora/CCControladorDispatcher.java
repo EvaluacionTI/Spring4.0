@@ -1,0 +1,38 @@
+package tata.bfp.controladora;
+
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+
+/* 1.0:
+ * 	Configura la clase como un controlador WEB
+ *	La clase java con la anotación @Controller, elegido con anotaciones en clases dentro del paquete tata.bfp.controladora,
+ *	como indica el fichero apl-spring-servlet.xml
+ */
+@Controller
+public class CCControladorDispatcher{
+	
+	// 2.0
+	// Mapea este controlador con una URL
+	@RequestMapping(value="/hello.htm")
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
+		throws ServletException, IOException{
+
+		String lsArchivoJsp = "/WEB-INF/views/jsp0201v01MostrarFecha.jsp";
+		String lsFechaSistema = (new Date()).toString();
+
+		return new ModelAndView(lsArchivoJsp, "vFechaActual", lsFechaSistema);
+
+	}
+
+}
+
+
