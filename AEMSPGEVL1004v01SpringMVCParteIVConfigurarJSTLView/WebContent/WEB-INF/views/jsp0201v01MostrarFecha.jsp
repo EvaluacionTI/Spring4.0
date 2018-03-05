@@ -11,7 +11,7 @@
 	</head>
 	
 	<body>
-		<h3 style = "background-color: orange; text-align: center">Inventario Bienes Leasing</h3>
+		<h3 style = "background-color: orange; text-align: center">PAAS : Arquitectura Host</h3>
 		<br>
 		<p>Mostrando la fecha que proviene del Controlador </p>
 		<br>

@@ -26,8 +26,9 @@ public class CCControladorDispacherTest {
 
 			// 1. Modelo no vacio
 			assertNotNull(oModeloVista.getModel());
-						
-			String lsObjetoEsperado = "/views/jsp0201v01MostrarFecha.jsp";
+
+			// La ruta esta definido en el archivo spring-servlet.xml
+			String lsObjetoEsperado = "jsp0201v01MostrarFecha";
 			String lsObjetoReal = oModeloVista.getViewName();
 			String lsFechaSistema = "";
 			

@@ -28,7 +28,8 @@ public class CCControladorDispatcher{
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException{
 
-		String lsArchivoJsp = "/WEB-INF/views/jsp0201v01MostrarFecha.jsp";
+		// La ruta esta definido en el archivo spring-servlet.xml
+		String lsArchivoJsp = "jsp0201v01MostrarFecha";
 		String lsFechaSistema = (new Date()).toString();
 		logger.info("=====> Fecha Real     :" + lsFechaSistema);
 
