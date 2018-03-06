@@ -40,7 +40,7 @@ public class CEProducto implements Serializable{
 		StringBuilder osbBuffer = new StringBuilder();
 		
 		osbBuffer.append("Id : " + getIdentificador() + ";");
-		osbBuffer.append("Descripciónn : " + getDescripcion() + ";");
+		osbBuffer.append("Descripción : " + getDescripcion() + ";");
 		osbBuffer.append("Precio : " + getPrecio());
 		
 		return osbBuffer.toString();

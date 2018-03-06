@@ -12,19 +12,16 @@
 	
 	<body>
 		<h1 style = "background-color: orange; text-align: center">PAAS : Distribuido - Host</h1>
-		<h6><fm:message key="titulo"></fm:message></h6>
 		<br>
 		<h5>Listado de Información</h5>
 		<p>
-		<fm:message key="saludocabecera"></fm:message>
-		<fm:message key="saludofecha"></fm:message>
-		<co:out value="${vModeloInventario.vFechaActual}"></co:out>
+		Fecha del Sistema : <co:out value="${vModeloInventario.vFechaActual}"></co:out>
 		<br>
 		<br>Lista de Productos
 		<br>
 		<co:forEach items="${vModeloInventario.vListaProducto}" var="vProducto">
-			<co:out value="vProducto.lsdescripcion"></co:out><i></i>
-			<co:out value="vProducto.ldprecio"></co:out>
+			<co:out value="${vProducto.descripcion}"></co:out><i></i>
+			<co:out value="${vProducto.precio}"></co:out>
 		</co:forEach>
 
 		<%
