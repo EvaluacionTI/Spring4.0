@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import tata.bfp.entidad.CEProducto;
+import tata.bfp.modelo.CDListaProducto;
 import tata.bfp.servicio.CIProductoManager;
 
 public class CSProductoManager implements CIProductoManager {
@@ -13,6 +14,7 @@ public class CSProductoManager implements CIProductoManager {
 	private static final long serialVersionUID = -645425184584887524L;
 
 	private List<CEProducto> moListaProducto; 
+	
 	
 	@Override
 	public void incrementaPrecio(int liPorcentaje) {
@@ -28,18 +30,18 @@ public class CSProductoManager implements CIProductoManager {
 
 	@Override
 	public List<CEProducto> getListaProducto() {
-		moLog.info("=====> Metodo Impl = getListaProducto");
+		CDListaProducto oCDDataProducto = new CDListaProducto();
+		moListaProducto = oCDDataProducto.dataListaProducto();
 		return moListaProducto;
 	}
-
 	
 	public List<CEProducto> getMoListaProducto() {
 		return moListaProducto;
 	}
 
-	public void setMoListaProducto(List<CEProducto> moListaProducto) {
-		moLog.info("=====> Metodo = setListaProducto" + moListaProducto);
-		this.moListaProducto = moListaProducto;
+	public void setMoListaProducto(List<CEProducto> poListaProducto) {
+		moLog.info("=====> Metodo = setListaProducto" + poListaProducto);
+		this.moListaProducto = poListaProducto;
 	}
 
 }

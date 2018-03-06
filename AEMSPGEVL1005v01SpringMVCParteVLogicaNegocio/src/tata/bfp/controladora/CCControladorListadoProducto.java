@@ -1,19 +1,15 @@
 package tata.bfp.controladora;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -38,8 +34,6 @@ public class CCControladorListadoProducto {
  * Además, hemos especificado un logger de manera que podemos verificar que pasamos por el manejador en cada momento. 
  * Usando STS, estos mensajes de log deben mostrarse en la pestaña 'Console'.
  */
-	
-	@Autowired
 	private CSProductoManager moProductoManager;
 	
     @RequestMapping(value="/listado.ea")
@@ -48,25 +42,26 @@ public class CCControladorListadoProducto {
     	List<CEProducto> oListaProducto;
 
     	oCDDataProducto = new CDListaProducto();
+    	moProductoManager = new CSProductoManager();
     	
     	String lsNombreJsp = "jsp0301v01MostrarListaProducto";
     	String lsVariableDom = "vModeloInventario";
 
         String lsFechaActual = (new Date()).toString();
         
-        oListaProducto = new ArrayList<CEProducto>();
-        
         oListaProducto = oCDDataProducto.dataListaProducto();
-        
+        moLog.info("=====> Lista de Productos antes de Controladora : " + oListaProducto.size());
         this.moProductoManager.setMoListaProducto(oListaProducto);
-        moLog.info("=====> Lista de Productos en Controladora");
-        moLog.info("=====> Cantidad Lista " + moProductoManager.getListaProducto().size());
+        moLog.info("=====> Lista de Productos despues de Controladora : " + moProductoManager.getMoListaProducto());        
+        moLog.info("=====> Cantidad Productos : " + moProductoManager.getListaProducto().size());
         
         // Creando un mapa de datos con la lista a procesar
         Map<String, Object> oModeloDatos = new HashMap<>();
         
         oModeloDatos.put("vFechaActual", lsFechaActual);
         oModeloDatos.put("vListaProducto", this.moProductoManager.getListaProducto());
+        
+        moLog.info("=====> ModelAndView generado  :" + oModeloDatos);
         
         return new ModelAndView(lsNombreJsp, lsVariableDom, oModeloDatos);
     }

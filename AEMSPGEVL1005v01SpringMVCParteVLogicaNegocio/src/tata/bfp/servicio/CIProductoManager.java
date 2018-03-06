@@ -11,5 +11,4 @@ public interface CIProductoManager extends Serializable {
 	
 	public List<CEProducto> getListaProducto();
 	
-//	public void setListaProducto(List<CEProducto> poListaProducto);
 }

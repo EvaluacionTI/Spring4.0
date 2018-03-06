@@ -1,9 +1,7 @@
 package tata.bfp.controladora;
 
-import java.io.IOException;
 import java.util.Date;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,8 +29,7 @@ public class CCControladorMostrarFecha {
  */
 	
 	@RequestMapping(value="/hello.ea")
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
-		throws ServletException, IOException{
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response){
 
 		String lsArchivoJsp = "jsp0201v01MostrarFecha";
 		String lsFechaSistema = (new Date()).toString();
