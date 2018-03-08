@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transacciones>
+
+	<transaccion>
+		<idTrx>CONS_TIPO_CAMBIO_VENTANILLA</idTrx>
+		<codTrn>3007</codTrn>
+		<longitud>600</longitud>
+		<programa>T30007</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_TIPO_CAMBIO</idTrx>
+		<codTrn>2070</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3001R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_CTAS_CTE</idTrx>
+		<codTrn>2071</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3002R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_CTAS_AHO</idTrx>
+		<codTrn>2072</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3003R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DET_INVERSIONES</idTrx>
+		<codTrn>2073</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3004R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_SALDO_TARJ_CREDITO</idTrx>
+		<codTrn>2074</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3005R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_SALDO_PRESTAMOS</idTrx>
+		<codTrn>2075</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3006R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_SALDO_DSCTO_LETRAS_COBR</idTrx>
+		<codTrn>2076</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3007R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_DET_CFZA</idTrx>
+		<codTrn>2077</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3008R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DET_COMEX</idTrx>
+		<codTrn>2078</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3009R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_CHQ_CTA</idTrx>
+		<codTrn>2079</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3010R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_MOV_CTA</idTrx>
+		<codTrn>2080</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3011R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_MOV_PRESTAMO</idTrx>
+		<codTrn>2081</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3012R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_MOV_TARJ_CRED</idTrx>
+		<codTrn>2082</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3013R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_DETALLE_CHQ</idTrx>
+		<codTrn>2083</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3014R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_LETRAS_GIRADOR</idTrx>
+		<codTrn>2220</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3021R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_LETRAS_ACEPTANTE</idTrx>
+		<codTrn>2221</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3022R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_DATOS_CLIENTE</idTrx>
+		<codTrn>2084</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3000R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+</transacciones>
+
+

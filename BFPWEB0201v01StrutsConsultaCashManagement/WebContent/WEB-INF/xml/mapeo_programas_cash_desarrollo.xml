@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transacciones>
+	<transaccion>
+		<idTrx>CONS_LETRAS_GIRADOR</idTrx>
+		<codTrn>2220</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3021R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_LETRAS_ACEPTANTE</idTrx>
+		<codTrn>2221</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3022R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PRELIQ_LETRAS_CANCELACION</idTrx>
+		<codTrn>2222</codTrn>
+		<longitud>1000</longitud>
+		<programa>CSH3023R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PRELIQ_LETRAS_RENOVACION</idTrx>
+		<codTrn>2223</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3024R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>LIQ_LETRAS_CANCELACION</idTrx>
+		<codTrn>2224</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3025R</programa>
+		<modulo>Letras</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PRELIQ_PREST_CRONOGRAMA</idTrx>
+		<codTrn>2225</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3026R</programa>
+		<modulo>Prestamos</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>LIQ_PREST_CRONOGRAMA</idTrx>
+		<codTrn>2226</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3027R</programa>
+		<modulo>Prestamos</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CARGO_CUENTA</idTrx>
+		<codTrn>3201</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0001R</programa>
+		<modulo>Cobros</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>ABONO_CUENTA</idTrx>
+		<codTrn>3200</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0001R</programa>
+		<modulo>Cobros</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PAGO_PROV_CCI</idTrx>
+		<codTrn>3220</codTrn>
+		<longitud>600</longitud>
+		<programa>CSHR3090</programa>
+		<modulo>Pagos</modulo>
+	</transaccion>
+
+
+
+	<transaccion>
+		<idTrx>PAGO_PROV_CTS</idTrx>
+		<codTrn>2040</codTrn>
+		<longitud>600</longitud>
+		<programa>T20210</programa>
+		<modulo>Pagos</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>PAGO_SERV_AGUA</idTrx>
+		<codTrn>3210</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0010R</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_SERV_LUZ</idTrx>
+		<codTrn>3213</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0013R</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>PAGO_SERV_LUZ</idTrx>
+		<codTrn>3214</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0014C</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_SERV_MOVISTAR</idTrx>
+		<codTrn>3213</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0013C</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PAGO_SERV_MOVISTAR</idTrx>
+		<codTrn>3214</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0014C</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_SERV_CLARO</idTrx>
+		<codTrn>3211</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0011R</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>PAGO_SERV_CLARO</idTrx>
+		<codTrn>3212</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0012R</programa>
+		<modulo>Pago de Servicios</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DATOS_CLIENTE</idTrx>
+		<codTrn>2084</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3000R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_TIPO_CAMBIO</idTrx>
+		<codTrn>2070</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3001R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>CONS_TIPO_CAMBIO_VENTANILLA</idTrx>
+		<codTrn>3007</codTrn>
+		<longitud>600</longitud>
+		<programa>T30007</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_CTAS_CTE</idTrx>
+		<codTrn>2071</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3002R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_CTAS_AHO</idTrx>
+		<codTrn>2072</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3003R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DET_INVERSIONES</idTrx>
+		<codTrn>2073</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3004R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_SALDO_TARJ_CREDITO</idTrx>
+		<codTrn>2074</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3005R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_SALDO_PRESTAMOS</idTrx>
+		<codTrn>2075</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3006R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_SALDO_DSCTO_LETRAS_COBR</idTrx>
+		<codTrn>2076</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3007R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DET_CFZA</idTrx>
+		<codTrn>2077</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3008R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DET_COMEX</idTrx>
+		<codTrn>2078</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3009R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_CHQ_CTA</idTrx>
+		<codTrn>2079</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3010R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_MOV_CTA</idTrx>
+		<codTrn>2080</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3011R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_MOV_PRESTAMO</idTrx>
+		<codTrn>2081</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3012R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_MOV_TARJ_CRED</idTrx>
+		<codTrn>2082</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3013R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>CONS_DETALLE_CHQ</idTrx>
+		<codTrn>2083</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH3014R</programa>
+		<modulo>Consultas</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CTAS_PROPIAS</idTrx>
+		<codTrn>3205</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0005R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CTAS_TERCEROS</idTrx>
+		<codTrn>3206</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0006R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CTAS_INTBANC</idTrx>
+		<codTrn>3207</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0007R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CTAS_BCR</idTrx>
+		<codTrn>3208</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0008R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CTAS_SWIFT</idTrx>
+		<codTrn>3203</codTrn>
+		<longitud>950</longitud>
+		<programa>CSH0003R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+
+	<transaccion>
+		<idTrx>TRANS_VALIDA_CUENTA</idTrx>
+		<codTrn>3202</codTrn>
+		<longitud>600</longitud>
+		<programa>CSH0002R</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+	<transaccion>
+		<idTrx>TRANS_CONS_ESTADO_CCI</idTrx>
+		<codTrn>3204</codTrn>
+		<longitud>600</longitud>
+		<programa>CSHR3066</programa>
+		<modulo>Transferencias</modulo>
+	</transaccion>
+
+</transacciones>
