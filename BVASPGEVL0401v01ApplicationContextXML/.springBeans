@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.2.201712210913-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/resources/springXML01Config.xml</config>
+		<config>src/resources/springXML02Constructor.xml</config>
+		<config>src/resources/springXML03GetterSetter.xml</config>
+		<config>src/resources/springXML04EsquemaCyP.xml</config>
+		<config>src/resources/springXML05EsquemaCyPconRef.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
