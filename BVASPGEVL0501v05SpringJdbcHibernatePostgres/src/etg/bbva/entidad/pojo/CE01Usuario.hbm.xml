@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2 abr. 2018 12:08:18 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="etg.bbva.entidad.CE01Usuario" table="dest01_usuario">
+  <id name="id" type="java.lang.Integer">
+   <column name="ID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="nombre" type="java.lang.String">
+   <column name="NOMBRE"/>
+  </property>
+ </class>
+</hibernate-mapping>

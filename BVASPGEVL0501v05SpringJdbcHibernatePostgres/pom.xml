@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>etg.bbva.evalua.spring</groupId>
+  <artifactId>BVASPGEVL0501v05SpringJdbcHibernatePostgres</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+<!--	[ 1. PROPIEDADES GENERALES ]	-->  
+  <properties>
+	<jstl.version>1.2</jstl.version>
+	<taglibs.version>1.1.2</taglibs.version>
+	<jsp.version>2.0</jsp.version>
+	<servletapi.version>2.5</servletapi.version>
+	<pmd.version>3.8</pmd.version>
+	<spring.version>4.3.14.RELEASE</spring.version>
+  </properties>
+
+ <!--	[ 3. DEPENDENCIAS UTILIZADAS ]	-->  
+  	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.5.10.RELEASE</version>
+	</parent>
+
+	<dependencies>
+		<!-- Dependencias para Spring Boot para Web 		--> 
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-web</artifactId>
+    	</dependency>
+
+		<!-- Dependencias para Spring Boot para Escritorio 		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- Dependencias para Spring Boot para Test		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<!-- Java solo para compilar, su contenedor tiene que tener-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+<!-- 			<version>${jstl.version}</version>   -->
+		</dependency>
+
+		<dependency>
+		    <groupId>taglibs</groupId>
+		    <artifactId>standard</artifactId>
+		    <version>${taglibs.version}</version>
+		</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+		<dependency>
+		    <groupId>postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>9.0-801.jdbc4</version>
+		</dependency>
+
+	</dependencies>
+	    
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+<!--        <version>3.7.0</version> -->
+        <configuration>
+          <release>9</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+<!--          <version>3.0.0</version> -->
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <organization>
+  	<name>Banco Continental Perú</name>
+  </organization>
+</project>
