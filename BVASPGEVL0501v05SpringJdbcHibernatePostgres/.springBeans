@@ -9,6 +9,7 @@
 	<configs>
 		<config>WebContent/WEB-INF/spring/applicationContext.xml</config>
 		<config>WebContent/WEB-INF/spring/springJdbcPostgres.xml</config>
+		<config>WebContent/WEB-INF/spring/springConfig.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
