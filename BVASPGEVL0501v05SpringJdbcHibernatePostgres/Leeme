@@ -1,5 +1,10 @@
+
 1. Pendiente
 
 2. Terminado
 
 3. En Git
+
+Resumen:
+a) Conexión a Postgres vía java con JDBC con librarias 
+b) Conexión a Postgres vía Spring JDBC con archivos xml de configuración

@@ -1,4 +1,4 @@
-package etg.bbva.modelo.impl2;
+package etg.bbva.modelo.impl.spring;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

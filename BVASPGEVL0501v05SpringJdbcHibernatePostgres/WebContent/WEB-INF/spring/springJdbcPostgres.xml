@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
+	<!-- A. Definición de conexión a Base de Datos with JDBC -->
 	<!-- 1.0
 		Bean dataSource, algo necesario siempre que queramos conectarnos a una base de datos. 
 	 -->
@@ -14,6 +15,7 @@
 		<property name="password" value = "aemsa152027"></property>
 	</bean>
 
+	<!-- B. Definición de conexión with JDBC for SPRING -->
 	<!-- 2.0
 		El jdbcTemplate de clase JdbcTemplate con un constructor al que pasamos el dataSource. 
 	 -->
@@ -24,7 +26,25 @@
 	<!-- 3.0
 		El clienteCD es nuestra clase para comunicar la aplicación con la base de datos.  
 	--> 
-	<bean	id="idCDUsuario" class="etg.bbva.modelo.impl2.CDUsuarioJDBCTemplate">
+	<bean	id="idCDUsuario" class="etg.bbva.modelo.impl.spring.CDUsuarioJDBCTemplate">
 			<property name="jdbcTemplate" ref="idJdbcTemplate"></property>
+	</bean>
+	
+	<!-- C. Definición de conexión SPRING WITH HIBERNATE -->
+	
+	<bean id="idSessionFactory" class = "org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref ="idDataSourcePostgres"></property>
+		<property name="mappingResources">
+			<list>
+				<value>etg/bbva/entidad/pojo/CE01Usuario.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="hibernate.connection.pool_size">1</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			</props>
+		</property>
 	</bean>
 </beans>
