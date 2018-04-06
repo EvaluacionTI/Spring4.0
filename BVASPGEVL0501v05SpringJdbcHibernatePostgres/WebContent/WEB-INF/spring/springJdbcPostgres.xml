@@ -31,7 +31,6 @@
 	</bean>
 	
 	<!-- C. Definición de conexión SPRING WITH HIBERNATE -->
-	
 	<bean id="idSessionFactory" class = "org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref ="idDataSourcePostgres"></property>
 		<property name="mappingResources">
@@ -47,4 +46,9 @@
 			</props>
 		</property>
 	</bean>
+
+	<bean id="idCDUsuarioDAOHibernate" class="etg.bbva.modelo.impl.hibernate.CDUsuarioDAOHibernate">
+		<property name="sessionFactory" ref="idSessionFactory"></property>
+	</bean>
+	
 </beans>
