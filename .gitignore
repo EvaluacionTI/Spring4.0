@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io
 deploy/
 log.roo
+
 .pmd
 bin
 global-groovy.log
@@ -8,14 +9,18 @@ soapui-errors.log
 soapui.log
 derby.log
 
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, Spring STS
 
 *.iml
-
 .classpath
 .project
-
+.tern-project
 .idea/
+
+# IntelliJ
+out/
+
+
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
@@ -39,10 +44,6 @@ derby.log
 
 *.ipr
 *.iws
-
-
-# IntelliJ
-out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
