@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>etg.bbva.evalua.spring</groupId>
+  <artifactId>AEMSPGEVL0302v03EvaluaModelView</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+    <!--  
+  	1. VERSIONES DE COMPONENTES UTILIZADOS 
+   -->  
+  <properties>
+		<jdk.version>1.6</jdk.version>
+		<spring.version>4.3.3.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
+		<servletapi.version>2.5</servletapi.version>
+		<junit.version>4.12</junit.version>
+  </properties>
+    
+  <dependencies>
+   <!--  
+  	2. DEPENDENCIAS UTILIZADAS 
+   -->
+
+  		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+  	  	<!-- Spring Core -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		   
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<!-- Java solo para compilar, su contenedor tiene que tener-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<!-- Pruebas Unitarias -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>				   
+   </dependencies>
+       
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
