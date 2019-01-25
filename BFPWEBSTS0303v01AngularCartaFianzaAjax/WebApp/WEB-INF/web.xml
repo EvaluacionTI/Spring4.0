@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+  <display-name>BFPWEBSTS0303v01AngularCartaFianzaAjax</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+<!-- Configuración de j_security_check 
+ 	 1.0 Configuración de Login 
+ 
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Personalizado</realm-name>
+		<form-login-config>
+			<form-login-page>/acceso.jsp</form-login-page>
+			<form-error-page>/acceso.jsp</form-error-page>
+		</form-login-config>
+	</login-config>  
+-->
+
+<!-- 2.0 Configuración del rol de seguridad 
+
+	<security-role>
+        <description>Cliente personalizado de Carta Fianza</description>
+        <role-name>CustomClientUser</role-name>
+    </security-role>
+-->
+
+<!-- 3.0 Configuración de la seguridad Constraint  
+	<security-constraint>
+		<display-name>Cliente personalizado de Carta Fianza</display-name>
+		<web-resource-collection>
+			<web-resource-name>Cliente personalizado de Carta Fianza</web-resource-name>
+			<url-pattern>/portal/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>Cliente personalizado de Carta Fianza</description>
+			<role-name>usuarioSeguridad</role-name>
+		</auth-constraint>		
+	</security-constraint>
+-->
+
+<!-- 
+	4.0 Configurando el Filtro del Servlet
+
+ 	<filter-mapping>
+ 		<filter-name>FiltroLogin</filter-name>
+ 		<url-pattern>/jsp0201v01LoginFORM_j_security_checkJSP.jsp</url-pattern>
+ 	</filter-mapping>
+ 	
+ 	<filter>
+ 		<display-name>Filtro de Login</display-name>
+ 		<filter-name>FiltroLogin</filter-name>
+ 		<filter-class>pe.tata.bfp.servlet.CCSeguridad_j_security_check</filter-class>
+ 	</filter>
+ --> 	
+</web-app>

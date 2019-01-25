@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>BFPWEBSTS0303v02Angular_j_security_check</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<!--  Configuración vía AJAX con jQuery -->  
+  	<!-- 
+  		1.0 Configuración de las páginas de Login
+  			Autenticación de tipo FORM 
+  	 -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Personalizado</realm-name>
+		<form-login-config>
+			<form-login-page>/JSP0101v01AccesoLogin.jsp</form-login-page>
+			<form-error-page>/JSP0102v01ErrorLogin.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	<!--
+		2.0 Configuración del rol de seguridad 
+	 -->
+	<security-role>
+		<description>Rol de seguridad que asignado a j_security_check</description>
+		<role-name>usuarioSeguridad</role-name>
+	</security-role>
+
+	<security-role>
+		<description>Rol de consulta de Carta Fianza</description>
+		<role-name>usuarioConsulta</role-name>
+	</security-role>	
+	<!--
+		3.0  Configuración de la restricción del rol de seguridad 
+	 -->
+	<security-constraint>
+		<display-name>Restricción de seguridad asignado a j_security_check</display-name>
+		<web-resource-collection>
+			<web-resource-name>Seguridad BPM</web-resource-name>
+			<url-pattern>/portal/*</url-pattern>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>Sólo administradores de seguridad</description>
+			<role-name>usuarioSeguridad</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<display-name>Restricción de consulta de Carta Fianza</display-name>
+		<web-resource-collection>
+			<web-resource-name>Consulta BPM</web-resource-name>
+			<url-pattern>/consulta/*</url-pattern>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>Sólo usuarios gestores</description>
+			<role-name>usuarioConsulta</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+</web-app>

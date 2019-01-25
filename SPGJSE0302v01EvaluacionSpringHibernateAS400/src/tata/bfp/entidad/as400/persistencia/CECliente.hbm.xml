@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+
+	<class name="tata.bfp.entidad.as400" table="CUMST">
+		<id name="idCodigo">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="tipoDocumento"/>
+		<property name="numeroDocumento"></property>
+		<property name="nombre" type="string" not-null="true"></property>
+	</class>
+	
+</hibernate-mapping>

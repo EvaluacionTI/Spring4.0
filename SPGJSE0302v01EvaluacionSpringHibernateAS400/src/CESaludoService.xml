@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 1.0 Bean Simple sólo el constructor -->
+	<bean id="idSaludoService" class="tata.bfp.entidad.beans.CESaludoService"/>
+		
+	<!-- 2.0 Bean con inyección de constructor -->
+	<bean id="idBeanConstructor" class="tata.bfp.entidad.beans.CESaludoService">
+		<constructor-arg value="Mery Cárdenas"></constructor-arg>
+	</bean>
+	
+	<!-- 3.0 Bean con referencia de objeto de constructores -->
+	<bean id="idBeanObjeto" class="tata.bfp.entidad.as400.CECliente"></bean>
+	<bean id="idBeanSaludo" class="tata.bfp.entidad.beans.CESaludoService">
+		<constructor-arg value="Esteban Díaz"></constructor-arg>
+		<constructor-arg ref="idBeanObjeto"></constructor-arg>
+	</bean>
+</beans>

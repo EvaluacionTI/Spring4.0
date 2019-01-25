@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tata.bfp.evaluacion.sts.spring</groupId>
+  <artifactId>SPGJSE0302v01EvaluacionSpringHibernateAS400</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  	<!--	[ 1. PROPIEDADES GENERALES ]	-->
+  	<properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>4.3.8.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
+		<taglibs.version>1.1.2</taglibs.version>
+		<jsp.version>2.0</jsp.version>
+		<servletapi.version>3.0.1</servletapi.version>
+		<junit.version>4.12</junit.version>
+		<log4j.version>2.8.2</log4j.version>
+
+	</properties>
+	  
+	<!--	[ 2. DEPENDENCIAS UTILIZADAS ]	-->
+	<dependencies>
+
+  		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+  	  	<!-- SPRING Core -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<!-- Java solo para compilar, su contenedor tiene que tener-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.sf.jt400/jt400 -->
+		<dependency>
+		    <groupId>net.sf.jt400</groupId>
+		    <artifactId>jt400</artifactId>
+		    <version>6.6</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core   
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>5.2.10.Final</version>
+		</dependency>
+		
+		-->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<!-- Pruebas Unitarias -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>${log4j.version}</version>
+		</dependency>
+	
+	</dependencies>	  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="idCEAventura" class="pe.inverfin.spring.entity.parteII.CESantoGrialAventura"/>
+	
+	<bean id="idCECaballero" class="pe.inverfin.spring.entity.parteII.CECaballeroDeLaMesaRedonda">
+		<!-- Utilizando el constructor -->
+		<constructor-arg value="Esteban"></constructor-arg>
+		
+		<!-- Utilizando el set -->
+		<property name="aventura" value="idCEAventura"></property>
+	</bean>
+
+	<!-- Declarando el Aspecto y configurando aspectos -->
+	<bean id="idTrovador" class="pe.inverfin.spring.entity.parteII.CETrovador"/>
+
+	<aop:config>
+		<aop:aspect ref="idTrovador">
+			<!-- A quien está monitoreando trovador a Caballero -->
+			<aop:pointcut expression="execution(* *.embarcarEnAventura(..)) and target(bean)" id="idAventuraPointCut"/>
+			
+			<aop:before method="cantarAntes" pointcut-ref="idAventuraPointCut" arg-names="bean"/>
+
+			<aop:after-returning method="cantarDespues" pointcut-ref="idAventuraPointCut" arg-names="bean"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>NexoFinanciero</title>
+	
+	<link type="text/css" rel="stylesheet" href="../js/ui-bootstrap/bootstrap.min.css"/>
+
+	<link type="text/css" rel="stylesheet" href="../css/portal.css" />
+
+	<link rel="manifest" href="../imagenes/icono/manifest.json" />
+
+	<script type="text/javascript" src="../js/angular-file-upload.min.js"></script>
+	<script type="text/javascript" src="../js/angular-hotkeys.js"></script>
+	<script type="text/javascript" src="../js/angular-locale_es-es.js"></script>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>	
+	<script type="text/javascript" src="../js/ui-bootstrap/ui-bootstrap-tpls-0.13.1-0.js"></script>
+	
+</head>
+
+<body data-ng-app="portal" data-ng-controller="principal">
+	<div style="min-width: 343px;">
+		<div class="ALERTA_CONTENEDOR" data-ng-show="alertaPortal.mensaje.length>0">
+			<table width="50%" align="center"><tbody><tr><td class="ALERTA_DETALLE">
+				<alert type="{{alertaPortal.tipo}}" close="alertaPortal.cerrar()">{{alertaPortal.mensaje}}</alert>
+			</td></tr></tbody></table>
+		</div>
+		<div>	
+		<div style="height: 70px"></div>
+		<div class="container-fluid" data-ng-show="seccion === 'Modulos'">
+		</div>
+		<div class="container-fluid" data-ng-show="seccion === 'Detalle'">
+		</div>
+		<div class="container-fluid" data-ng-show="seccion === 'Perfil'">
+		</div>
+		<div data-ng-include="'../piepagina.html'"></div>
+	</div>
+</body>
+</html>
